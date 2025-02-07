@@ -1,0 +1,236 @@
+.container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.8s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f1f7f1, #e8f3e8);
+  z-index: 3;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #2d7a4d, #40b06e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #5c7b6c;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+
+.subtitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Section */
+.about-section {
+  background: #ffffff;
+  z-index: 2;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #2d7a4d, #40b06e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #5c7b6c;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Projects Section */
+.projects-section {
+  background: #f1f7f1;
+  z-index: 1;
+}
+
+.projects-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #2d7a4d;
+  margin-bottom: 3rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(45, 122, 77, 0.05),
+    0 10px 15px rgba(45, 122, 77, 0.02);
+  border: 1px solid rgba(45, 122, 77, 0.08);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 8px 12px rgba(45, 122, 77, 0.08),
+    0 15px 25px rgba(45, 122, 77, 0.05);
+  border: 1px solid rgba(45, 122, 77, 0.12);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2d7a4d;
+}
+
+.card h3 a {
+  color: #2d7a4d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card h3 a:hover {
+  color: #40b06e; /* Using the second color from your gradient for hover state */
+}
+
+.card p {
+  color: #5c7b6c;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-link {
+  color: #5c7b6c;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #2d7a4d;
+  transform: translateY(-2px);
+}
+
+.social-link.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-link:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.social-link:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.social-link:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+}
