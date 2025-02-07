@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileCheck, FileCode, FileText } from "lucide-react";
 import './styles.css';
 
 const App = () => {
@@ -52,8 +52,8 @@ const App = () => {
               { Icon: Github, link: "https://github.com/jeffwu0724" },
               { Icon: Linkedin, link: "https://www.linkedin.com/in/jiefeng-wu/" },
               { 
-                Icon: Mail, 
-                link: "mailto:jeffwu07242024@gmail.com?subject=Hello Jeff&body=Hi Jeff, I'd like to connect with you!" 
+                Icon: FileText, 
+                link: "https://drive.google.com/file/d/10L0KS9iPm-woWCthixJDZLPZD6LRnFYC/view?usp=sharing" 
               },
             ].map(({ Icon, link }, index) => (
               <a
