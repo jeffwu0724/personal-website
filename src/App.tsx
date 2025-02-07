@@ -34,7 +34,7 @@ const App = () => {
   const products = [
     {
       title: "Dream Generator",
-      demo: "https://dream-generator-39akb8at7-jeffwu0724s-projects.vercel.app/",
+      demo: "https://dream-generator-nine.vercel.app",
       description:
         "A full-stack AI-powered dream generator using AWS Lambda, DynamoDB, and S3 to create, store, and edit dreams with keywords, stories, and AI-generated images.",
     }
